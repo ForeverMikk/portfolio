@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Navbar from './componets/Navbar/Navbar.jsx';
-import './index.css'
+import {MainApp} from './componets/MainApp'
+import './index.scss'
 
 const divRoot = document.querySelector('#root');
 
-ReactDOM.render(<Navbar />, divRoot)
+ReactDOM.render(<MainApp />, divRoot)
 

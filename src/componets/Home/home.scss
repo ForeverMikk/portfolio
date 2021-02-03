@@ -1,0 +1,39 @@
+.hero {
+    display: grid;
+    text-align: center;
+    padding: 4em;
+}
+.hero-design {
+    display: none;
+}
+@media only screen and (min-width: 1050px){
+    .hero {
+        height: 90vh;
+    }
+    .hero {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: #211E1E;
+        padding: 0;
+        .content {
+            background: #FFF; 
+            padding: 6em 8em 6em 4em; 
+            text-align: left;
+        }
+    }
+    .name {
+        margin: unset;
+    }
+    .hero-design {
+        display: unset;
+        margin-left: -50% ;
+        margin-top: 15%;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1250px){
+    .hero .content {
+        padding: 6em 8em 6em 10em;
+    }
+}

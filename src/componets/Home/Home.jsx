@@ -1,0 +1,29 @@
+import React from 'react';
+
+import './home.scss';
+
+export const Home = () => {
+    return (
+        <div className="hero">
+            <div className="content">
+                <div className="name">
+                    <p>Hello, My Name is</p>
+                    <h1>Michael Molina</h1>
+                    <p>Web Developer & Geek</p>
+                </div>
+            </div>
+            <svg className="hero-design" xmlns="http://www.w3.org/2000/svg" width="600" height="594" viewBox="0 0 600 594">
+                <g id="Prismas" transform="translate(-867 -363)">
+                    <rect id="Rectángulo_17" data-name="Rectángulo 17" width="150" height="150" rx="20" transform="translate(1165 363)" fill="#ec1a21"/>
+                    <rect id="Rectángulo_26" data-name="Rectángulo 26" width="150" height="150" rx="64" transform="translate(1017 657)" fill="#fcff1c"/>
+                    <rect id="Rectángulo_19" data-name="Rectángulo 19" width="150" height="150" rx="20" transform="translate(1317 513)" fill="#fcff1c"/>
+                    <rect id="Rectángulo_20" data-name="Rectángulo 20" width="150" height="150" rx="20" transform="translate(1017 507)" fill="#0d24e0"/>
+                    <rect id="Rectángulo_21" data-name="Rectángulo 21" width="150" height="150" rx="20" transform="translate(1019 807)" fill="#0d24e0"/>
+                    <rect id="Rectángulo_22" data-name="Rectángulo 22" width="150" height="150" rx="20" transform="translate(1167 662)" fill="#ec1a21"/>
+                    <rect id="Rectángulo_23" data-name="Rectángulo 23" width="150" height="150" rx="20" transform="translate(867 657)" fill="#ec1a21"/>
+                    <rect id="Rectángulo_64" data-name="Rectángulo 64" width="150" height="150" rx="64" transform="translate(1167 513)" fill="#fff"/>
+                </g>
+            </svg>
+        </div>
+    )
+}
