@@ -10,15 +10,15 @@ import './navbar.scss';
 export const Navbar = () => { //Componente o Funcional Component
     return (
         <>
-        <div className='nav-container'>
+        <div className='nav-container' id="home">
             <header>
                 <img className="logo" src={logo} alt=""/>    
                 <nav>
                     <ul>
-                        <li><a href="#">About Me</a></li>
-                        <li><a href="#">My Work</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact Me</a></li>
+                        <li><a href="https://github.com">About Me</a></li>
+                        <li><a href="https://github.com">My Work</a></li>
+                        <li><a href="https://github.com">Services</a></li>
+                        <li><a href="https://github.com">Contact Me</a></li>
                     </ul>
                 </nav>
             </header>
