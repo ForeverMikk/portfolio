@@ -1,15 +1,26 @@
 import React from 'react';
 
 import './home.scss';
+import curriculum from './../../assets/pdf/MichaelMolinaCV.pdf';
 
 export const Home = () => {
     return (
-        <div className="hero">
-            <div className="content">
-                <div className="name">
-                    <p>Hello, My Name is</p>
-                    <h1>Michael Molina</h1>
-                    <p>Web Developer & Geek</p>
+        <>
+        <a href="#" className="scrolltop" id="scroll-top">
+            <i className="bx bx-chevron-up scrolltop-icon">
+                
+            </i>
+        </a>
+        <section className="hero" id="hero">
+            <div className="hero-container">
+                <div className="hero-data">
+                    <span className="intro-text">Hello, My Name is</span>
+                    <h1 className="intro-name">Michael Molina</h1>
+                    <span className="intro-text">Web Developer & Geek</span>
+                    <div className="buttons">
+                        <a download="" href={curriculum} className="button button-1">Download CV</a>
+                        <a href="" className="button button-2">About Me</a>
+                    </div>
                 </div>
             </div>
             <svg className="hero-design" xmlns="http://www.w3.org/2000/svg" width="600" height="594" viewBox="0 0 600 594">
@@ -24,6 +35,7 @@ export const Home = () => {
                     <rect id="Rectángulo_64" data-name="Rectángulo 64" width="150" height="150" rx="64" transform="translate(1167 513)" fill="#fff"/>
                 </g>
             </svg>
-        </div>
+        </section>
+        </>
     )
 }

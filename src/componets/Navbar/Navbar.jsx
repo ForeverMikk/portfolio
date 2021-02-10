@@ -10,7 +10,25 @@ import './navbar.scss';
 export const Navbar = () => { //Componente o Funcional Component
     return (
         <>
-        <div className='nav-container' id="home">
+        <header className="l-header" id="header">
+            <nav className="nav bd-container">
+                <a href="#home" className="nav-logo"><img src={logo} alt=""/></a>
+
+                <div className="nav-menu" id="nav-menu">
+                    <ul className="nav-list">
+                        <li className="nav-item"><a href="#about" className="nav-link">About me</a></li>
+                        <li className="nav-item"><a href="#portfolio" className="nav-link">My work</a></li>
+                        <li className="nav-item"><a href="#services" className="nav-link">Services</a></li>
+                        <li className="nav-item"><a href="#contact" className="nav-link">Contact me</a></li>
+                    </ul>
+                </div>
+
+                <div className="nav-toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+        {/* <div className='nav-container' id="home">
             <header>
                 <img className="logo" src={logo} alt=""/>    
                 <nav>
@@ -28,7 +46,7 @@ export const Navbar = () => { //Componente o Funcional Component
                     <li><a href="https://twitter.com" target='_blank' rel='noopener noreferrer'><img src={twitter} alt="" /></a></li>
                 </ul>
             </div>         
-        </div>
+        </div> */}
         </>
     )
 }

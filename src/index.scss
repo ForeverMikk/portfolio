@@ -1,7 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&family=Roboto+Mono:wght@100;200;300;400;500;600&display=swap');
 
-* {
+:root {
+    --header-height: 3rem;
+
+    // COLORS
+    --first-color: #0D24E0;
+    --second-color: #EC1A21;
+    --third-color: #FCFF1C;
+    --fourth-color: #211E1E;
+
+    // FONTS 
+    --tittle-font: 'Poppins', sans-serif;
+    --text-font: 'Roboto Mono', monospace;
+
+    // Font Size
+    --big-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .93rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    // Font Size
+    --font-light: 300; 
+    --font-meidum: 500;
+    --font-bold: 600  ;
+    --font-semibold: 700;
+
+    //Margenes
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+    // Z-INDEX
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+}
+*,::before,::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--tittle-font);
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    // font-family: 'Roboto Mono', monospace;
+    font-size: var(--normal-font-size);
+    // margin: var(--header-height) 0 0 0;
+}
+h1,h2,h3,ul,p {
+    margin: 0;
+}
+h2, h3 {
+    font-weight: var(--font-semibold);
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+section {
+    padding: 4rem 4rem 0;
+}
+.section-title, .section-subtitle {
+    text-align: center;           
+}
+.section-title {
+    position: relative;
+    font-size: var(--h1-font-size);
+}
+.section-subtitle {
+    display: block;
+    font-family: var(--text-font);
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-3);
+}
+
+
+// LAYOUT // 
+.bd-container {
+    max-width: 1024px;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+}
+.bd-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        // Font Size
+        --big-font-size: 4.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
 }
