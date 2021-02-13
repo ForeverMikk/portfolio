@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {MainApp} from './MainApp'
-import './index.scss'
+
+import './index.scss';
+import { App } from './App';
 
 const divRoot = document.querySelector('#root');
 
-ReactDOM.render(<MainApp />, divRoot)
-
+ReactDOM.render(<App />, divRoot);
