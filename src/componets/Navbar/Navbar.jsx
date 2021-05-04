@@ -1,6 +1,6 @@
 // import React, { Fragment } from 'react'; //Esto es en caso de Esribir la etiqueta Fragment
 // No es necesario puedes hacerlo con los puros signos sin abrir nada
-import React from 'react';
+import React, { useState } from 'react';
 
 import logo from './../../assets/img/logo.png';
 // import github from './../../assets/img/github.png';
@@ -8,7 +8,26 @@ import logo from './../../assets/img/logo.png';
 
 import './navbar.scss';
 
+// const NavToggle = () => {
+//   const [hideNavbar, setHideNavbar] = useState(false);
+
+//   return (
+//     <div className={`nav bd-container ${hideNavbar ? 'hide' : ''}`}>
+//       <button
+//         id='toggle'
+//         onClick={() => {
+//           setHideNavbar(!hideNavbar);
+//         }}
+//       >
+//         <i className='bx bx-menu'></i>
+//       </button>
+//     </div>
+//   );
+// };
+
 export const Navbar = () => {
+  const [hideNavbar, setHideNavbar] = useState(false);
+
   //Componente o Funcional Component
   return (
     <>
@@ -18,7 +37,7 @@ export const Navbar = () => {
             <img src={logo} alt='' />
           </a>
 
-          <div className='nav-menu' id='nav-menu'>
+          <div className={`nav-menu ${hideNavbar ? 'hide' : ''}`} id='nav-menu'>
             <ul className='nav-list'>
               <li className='nav-item'>
                 <a href='#about' className='nav-link'>
@@ -43,9 +62,19 @@ export const Navbar = () => {
             </ul>
           </div>
 
-          <div className='nav-toggle' id='nav-toggle'>
+          <button
+            id='toggle'
+            className='nav-toggle'
+            onClick={() => {
+              setHideNavbar(!hideNavbar);
+            }}
+          >
             <i className='bx bx-menu'></i>
-          </div>
+          </button>
+
+          {/* <div className='nav-toggle' id='nav-toggle'>
+            <i className='bx bx-menu'></i>
+          </div> */}
         </nav>
       </header>
       {/* <div className='nav-container' id='home'>

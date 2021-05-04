@@ -20,18 +20,20 @@ export const About = () => {
             creating and developing web interfaces
           </p>
         </div>
+        {/* <AboutItem /> */}
         <div>
-          <div className='about-number'>23</div>
-          <div className='about-achievement'>Age</div>
+          <span className='about-number'>23</span>
+          <span className='about-achievement'>Age</span>
         </div>
         <div>
-          <div className='about-number'>3</div>
-          <div className='about-achievement'>Years of Experience</div>
+          <span className='about-number'>2</span>
+          <span className='about-achievement'>Years of Experience</span>
         </div>
         <div>
-          <div className='about-number'>+5</div>
-          <div className='about-achievement'>Projects</div>
+          <span className='about-number'>5</span>
+          <span className='about-achievement'>Projects</span>
         </div>
+
         <img src={about_img} alt='' className='about-img' />
       </div>
     </section>

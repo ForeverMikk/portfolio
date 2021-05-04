@@ -6,9 +6,6 @@ import curriculum from './../../assets/pdf/MichaelMolinaCV.pdf';
 export const Home = () => {
   return (
     <>
-      <a href='/' className='scrolltop' id='scroll-top'>
-        <i className='bx bx-chevron-up scrolltop-icon'></i>
-      </a>
       <section className='hero' id='hero'>
         <div className='hero-container'>
           <div className='hero-data'>
