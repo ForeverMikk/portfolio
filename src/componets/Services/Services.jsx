@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './services.scss';
 export const Services = () => {
   return (
     <section className='section bd-container' id='services'>
@@ -10,7 +11,7 @@ export const Services = () => {
       <span className='section-subtitle'>All that you need</span>
 
       <div className='services-container bd-grid'>
-        <div className='services__data'>
+        <div className='services-data'>
           <i className='bx bx-palette services-icon'></i>
           <h3 className='services-title'>UX/UI Design</h3>
           <p className='services-description'>
@@ -23,7 +24,7 @@ export const Services = () => {
       </div>
 
       <div className='services-container bd-grid'>
-        <div className='services__data'>
+        <div className='services-data'>
           <i className='bx bx-laptop services-icon'></i>
           <h3 className='services-title'>UX/UI Design</h3>
           <p className='services-description'>
@@ -36,7 +37,7 @@ export const Services = () => {
       </div>
 
       <div className='services-container bd-grid'>
-        <div className='services__data'>
+        <div className='services-data'>
           <i className='bx bx-palette services-icon'></i>
           <h3 className='services-title'>UX/UI Design</h3>
           <p className='services-description'>

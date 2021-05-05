@@ -8,23 +8,6 @@ import logo from './../../assets/img/logo.png';
 
 import './navbar.scss';
 
-// const NavToggle = () => {
-//   const [hideNavbar, setHideNavbar] = useState(false);
-
-//   return (
-//     <div className={`nav bd-container ${hideNavbar ? 'hide' : ''}`}>
-//       <button
-//         id='toggle'
-//         onClick={() => {
-//           setHideNavbar(!hideNavbar);
-//         }}
-//       >
-//         <i className='bx bx-menu'></i>
-//       </button>
-//     </div>
-//   );
-// };
-
 export const Navbar = () => {
   const [hideNavbar, setHideNavbar] = useState(false);
 
@@ -71,47 +54,8 @@ export const Navbar = () => {
           >
             <i className='bx bx-menu'></i>
           </button>
-
-          {/* <div className='nav-toggle' id='nav-toggle'>
-            <i className='bx bx-menu'></i>
-          </div> */}
         </nav>
       </header>
-      {/* <div className='nav-container' id='home'>
-        <header>
-          <img className='logo' src={logo} alt='' />
-          <nav>
-            <ul>
-              <li>
-                <a href='https://github.com'>About Me</a>
-              </li>
-              <li>
-                <a href='https://github.com'>My Work</a>
-              </li>
-              <li>
-                <a href='https://github.com'>Services</a>
-              </li>
-              <li>
-                <a href='https://github.com'>Contact Me</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <div className='social-header'>
-          <ul>
-            <li>
-              <a href='https://github.com' target='_blank' rel='noopener noreferrer'>
-                <img src={github} alt='' />
-              </a>
-            </li>
-            <li>
-              <a href='https://twitter.com' target='_blank' rel='noopener noreferrer'>
-                <img src={twitter} alt='' />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div> */}
     </>
   );
 };
