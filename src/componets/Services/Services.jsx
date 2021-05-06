@@ -8,7 +8,7 @@ export const Services = () => {
         <div className='line'> </div>
         <h2 className='section-title'>Services</h2>
       </div>
-      <span className='section-subtitle'>All that you need</span>
+      <span className='section-subtitle'>Betond my Work</span>
 
       <div className='services-container bd-grid'>
         <div className='services-data'>
