@@ -9,7 +9,9 @@ export const Contact = () => {
         <div className='line'> </div>
         <h2 className='section-title'>Contact me</h2>
       </div>
+
       <span className='section-subtitle'>Send me a Message</span>
+
       <div className='contact_container bd-grid'>
         <div className='contact_content bd.grid'>
           <div className='contact_box'>

@@ -1,0 +1,39 @@
+.footer {
+  background-color: var(--fourth-color);
+  color: #fff;
+  text-align: center;
+}
+
+.footer_container {
+  padding: 3rem 0;
+}
+
+.footer_title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-semibold);
+}
+
+.footer_description {
+  margin-bottom: var(--mb-3);
+}
+
+.footer_social {
+  margin-bottom: var(--mb-6);
+}
+
+.footer_link {
+  font-size: 1.4rem;
+  color: var(--first-color);
+  margin: 0 var(--mb-1);
+  transition: 0.3s;
+}
+
+.footer_link:hover {
+  color: #fff;
+}
+
+.footer_copy {
+  font-size: var(--smaller-font-size);
+  color: var(--second-color);
+}
