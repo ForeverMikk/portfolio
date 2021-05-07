@@ -14,7 +14,7 @@ export const Navbar = () => {
   //Componente o Funcional Component
   return (
     <>
-      <header className='l-header' id='header'>
+      <header className='header l-header' id='header'>
         <nav className='nav bd-container'>
           <a href='#home' className='nav-logo'>
             <img src={logo} alt='' />

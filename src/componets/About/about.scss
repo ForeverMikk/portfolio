@@ -44,3 +44,10 @@
   width: 220px;
   border-radius: 0.5rem;
 }
+
+/* ========== Media Querys ==========*/
+@media screen and (min-width: 576px) {
+  .about-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -12,6 +12,7 @@ export const Home = () => {
             <span className='intro-text'>Hello, My Name is</span>
             <h1 className='intro-name'>Michael Molina</h1>
             <span className='intro-text'>Web Developer & Geek</span>
+
             <div className='buttons'>
               <a download='' href={curriculum} className='button button-1'>
                 Download CV
@@ -22,6 +23,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
+
         <svg
           className='hero-design'
           xmlns='http://www.w3.org/2000/svg'

@@ -45,3 +45,10 @@
 .work-company {
   display: block;
 }
+
+/* ========== Media Querys ==========*/
+@media screen and (min-width: 576px) {
+  .work-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

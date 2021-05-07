@@ -28,3 +28,9 @@
 .services-description {
   margin-bottom: var(--mb-4);
 }
+
+@media screen and (min-width: 576px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

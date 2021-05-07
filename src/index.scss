@@ -1,115 +1,142 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&family=Roboto+Mono:wght@100;200;300;400;500;600&display=swap');
 
 :root {
-    --header-height: 3rem;
+  --header-height: 3rem;
 
-    // COLORS
-    --first-color: #0D24E0;
-    --second-color: #EC1A21;
-    --third-color: #FCFF1C;
-    --fourth-color: #211E1E;
+  // COLORS
+  --first-color: #0d24e0;
+  --first-color-light: #6b7aee;
+  --second-color: #ec1a21;
+  --second-color-light: #f84046;
+  --third-color: #fcff1c;
+  --fourth-color: #211e1e;
 
-    // FONTS 
-    --tittle-font: 'Poppins', sans-serif;
-    --text-font: 'Roboto Mono', monospace;
+  // FONTS
+  --title-font: 'Poppins', sans-serif;
+  --text-font: 'Roboto Mono', monospace;
 
-    // Font Size
-    --big-font-size: 2.5rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .93rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
+  // Font Size
+  --big-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
-    // Font Size
-    --font-light: 300; 
-    --font-meidum: 500;
-    --font-bold: 600  ;
-    --font-semibold: 700;
+  // Font Weigth
+  --font-light: 300;
+  --font-meidum: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
 
-    //Margenes
-    --mb-1: .5rem;
-    --mb-2: 1rem;
-    --mb-3: 1.5rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
+  // Margenes
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
 
-    // Z-INDEX
-    --z-normal: 1;
-    --z-tooltip: 10;
-    --z-fixed: 100;
-
+  // Z-INDEX
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
-*,::before,::after {
-    box-sizing: border-box;
+
+/* ===== Global Styles ===== */
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body {
-    font-family: var(--tittle-font);
-    margin: 0;
-    font-size: var(--normal-font-size);
-    // margin: var(--header-height) 0 0 0;
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--title-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-meidum);
+  // background-color: var(--fourth-color);
+  line-height: 1.6;
 }
-h1,h2,h3,ul,p {
-    margin: 0;
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
 }
-h2, h3 {
-    font-weight: var(--font-semibold);
+
+h2,
+h3 {
+  font-weight: var(--font-semibold);
 }
+
 ul {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
-a{
-    text-decoration: none;
+
+a {
+  text-decoration: none;
 }
+
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-section {
-    padding: 4rem 4rem 0;
+
+/* ===== Section Styles ===== */
+.section {
+  padding: 4rem 0 2rem;
 }
-.section-title, .section-subtitle {
-    text-align: center;           
-}
-.section-title {
-    position: relative;
-    font-size: var(--h1-font-size);
-}
+
+.section-title,
 .section-subtitle {
-    display: block;
-    font-family: var(--text-font);
-    font-size: var(--smaller-font-size);
-    margin-bottom: var(--mb-3);
+  text-align: center;
 }
 
+.section-title {
+  font-size: var(--h1-font-size);
+  color: var(--fourth-color);
+  position: relative;
+}
 
-// LAYOUT // 
+.section-subtitle {
+  display: block;
+  font-family: var(--text-font);
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+/* ===== LAYOUT ===== */
 .bd-container {
-    max-width: 1024px;
-    width: calc(100% - 2rem);
-    margin-left: var(--mb-2);
-    margin-right: var(--mb-2);
+  max-width: 1024px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
 }
 .bd-grid {
-    display: grid;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
-@media screen and (min-width: 768px){
-    :root{
-        // Font Size
-        --big-font-size: 4.5rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
-    }
+/* ==== Global Media Querys ==== */
+@media screen and (min-width: 768px) {
+  :root {
+    // Font Size
+    --big-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
 }
