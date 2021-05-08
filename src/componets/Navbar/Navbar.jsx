@@ -11,7 +11,6 @@ import './navbar.scss';
 export const Navbar = () => {
   const [hideNavbar, setHideNavbar] = useState(false);
 
-  //Componente o Funcional Component
   return (
     <>
       <header className='header l-header' id='header'>

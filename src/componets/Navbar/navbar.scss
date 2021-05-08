@@ -46,6 +46,32 @@ img {
   color: #fff;
 }
 
+/* ===== Scroll Button Styles ==== */
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background: rgba(123, 111, 113, 0.7);
+  border-radius: 0.5rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  border: none;
+  // visibility: hidden;
+}
+
+.scrolltop:hover {
+  background-color: var(--first-color-light);
+}
+
+.scroll-icon {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
 /**** Show Menu ****/
 @media screen and (max-width: 768px) {
   .hide {
