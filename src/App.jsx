@@ -14,7 +14,7 @@ import { About } from './componets/About/About';
 export const App = () => {
   return (
     <>
-      <ScrollToTop />
+      <ScrollToTop smooth />
       <Navbar />
       <Home />
       <About />

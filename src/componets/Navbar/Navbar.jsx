@@ -16,7 +16,7 @@ export const Navbar = () => {
       <header className='header l-header' id='header'>
         <nav className='nav bd-container'>
           <a href='#home' className='nav-logo'>
-            <img src={logo} alt='' />
+            <img src={logo} alt='' className='nav-img' />
           </a>
 
           <div className={`nav-menu ${hideNavbar ? 'hide' : ''}`} id='nav-menu'>

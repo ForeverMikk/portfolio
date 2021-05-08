@@ -127,9 +127,26 @@ img {
   gap: 1.5rem;
 }
 
-.styles_scroll-to-top__2A70v {
-  background: rgba(123, 111, 113, 0.7);
+/* ===== Buttons ===== */
+.button {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  transition: 0.3s;
+  border-radius: 0.25rem;
 }
+.button-1 {
+  background-color: var(--first-color);
+  color: #fff;
+  border: 1px solid;
+  border-color: var(--first-color);
+}
+.button-1:hover {
+  background-color: #fff;
+  color: var(--first-color);
+  border: 1px solid;
+  border-color: var(--first-color);
+}
+
 /* ==== Global Media Querys ==== */
 @media screen and (min-width: 768px) {
   :root {

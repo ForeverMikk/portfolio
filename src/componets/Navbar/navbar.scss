@@ -1,10 +1,7 @@
-img {
-  // margin-top: 3rem;
-  // padding: auto;
+.nav-img {
   width: 3rem;
   height: auto;
 }
-
 .l-header {
   width: 100%;
   position: fixed;
@@ -14,6 +11,7 @@ img {
   background-color: var(--first-color);
   color: #fff;
 }
+
 /* ========== NAVBAR ===========*/
 .nav {
   height: var(--header-height);
@@ -38,7 +36,6 @@ img {
 .nav-toggle {
   z-index: var(--z-fixed);
 }
-
 .nav-link:hover {
   color: var(--first-color-light);
 }
@@ -62,11 +59,9 @@ img {
   border: none;
   // visibility: hidden;
 }
-
 .scrolltop:hover {
   background-color: var(--first-color-light);
 }
-
 .scroll-icon {
   color: #fff;
   font-size: 1.25rem;
