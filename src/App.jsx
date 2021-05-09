@@ -6,8 +6,8 @@ import { Navbar } from './componets/Navbar/Navbar';
 import { Home } from './componets/Home/Home';
 import { About } from './componets/About/About';
 import { Work } from './componets/Work/Work';
-// import { Portfolio } from './componets/Portfolio/Portfolio';
-// import { Services } from './componets/Services/Services';
+import { Portfolio } from './componets/Portfolio/Portfolio';
+import { Services } from './componets/Services/Services';
 // import { Contact } from './componets/Contact/Contact';
 // import { Footer } from './componets/Footer/Footer';
 
@@ -19,9 +19,9 @@ export const App = () => {
       <Home />
       <About />
       <Work />
-      {/*<Portfolio />
+      <Portfolio />
       <Services />
-      <Contact />
+      {/*<Contact />
       <Footer /> */}
     </>
   );

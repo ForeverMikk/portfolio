@@ -14,18 +14,21 @@
 .services-icon,
 .services-title {
   margin-bottom: var(--mb-2);
-  color: var(--first-color);
 }
 
 .services-icon {
   font-size: 3rem;
+  color: var(--fourth-color);
 }
 
 .services-title {
+  color: var(--second-color-light);
   font-size: var(--h3-font-size);
+  font-family: var(--text-font);
 }
 
 .services-description {
+  color: var(--first-color-light);
   margin-bottom: var(--mb-4);
 }
 
