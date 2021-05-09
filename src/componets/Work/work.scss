@@ -50,3 +50,16 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .work-box {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .work-container {
+    column-gap: 6rem;
+  }
+}

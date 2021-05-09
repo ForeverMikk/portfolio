@@ -12,6 +12,14 @@ const ContactBox = ({ title, description, icon }) => {
     </div>
   );
 };
+
+const ContactSocial = ({ icon }) => {
+  return (
+    <a href='#social' className='contact-social'>
+      <i className={`bx ${icon}`}></i>
+    </a>
+  );
+};
 export const Contact = () => {
   return (
     <section className='contact section bd-container' id='portfolio'>
@@ -32,15 +40,9 @@ export const Contact = () => {
             <i className='bx bx-chat contact-icon'> </i>
             <h3 className='contact-title'>Chat</h3>
             <div>
-              <a href='#social' className='contact-social'>
-                <i className='bx bxl-whatsapp-square'></i>
-              </a>
-              <a href='#social' className='contact-social'>
-                <i className='bx bxl-telegram'></i>
-              </a>
-              <a href='#social' className='contact-social'>
-                <i className='bx bxl-twitter'></i>
-              </a>
+              <ContactSocial icon='bxl-whatsapp' />
+              <ContactSocial icon='bxl-telegram' />
+              <ContactSocial icon='bxl-twitter' />
             </div>
           </div>
         </div>
@@ -78,5 +80,9 @@ ContactBox.propTypes = {
 };
 
 ContactBox.propTypes = {
+  icon: PropTypes.string.isRequired,
+};
+
+ContactSocial.propTypes = {
   icon: PropTypes.string.isRequired,
 };

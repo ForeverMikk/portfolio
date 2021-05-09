@@ -21,7 +21,7 @@
 }
 .home-text,
 .home-profession {
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--text-font);
   display: block;
   font-weight: var(--font-meidum);
 }
@@ -85,4 +85,43 @@
   color: #fff;
   border: 1px solid;
   border-color: var(--first-color);
+}
+
+/* ========== Media Querys ==========*/
+@media screen and (min-width: 576px) {
+  .home-img img {
+    width: 330px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home-container {
+    height: calc(100vh - 15rem);
+    grid-template-rows: max-content 0.5fr;
+    align-content: flex-end;
+  }
+  .home-name {
+    font-size: 3rem;
+  }
+  .home-text {
+    font-size: 1.25rem;
+  }
+  .home-profession {
+    font-size: 2rem;
+  }
+
+  /* Social Media Icons */
+  .home-social {
+    flex-direction: row;
+    align-items: center;
+  }
+  .home-social-icon {
+    margin-right: var(--mb-5);
+    margin-bottom: 0;
+  }
+
+  /* Home Image */
+  .home-img {
+    width: 440px;
+  }
 }

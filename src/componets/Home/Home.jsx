@@ -2,7 +2,7 @@ import React from 'react';
 
 import './home.scss';
 import curriculum from './../../assets/pdf/MichaelMolinaCV.pdf';
-import home from './../../assets/img/home3.jpg';
+import home from './../../assets/img/home2.jpg';
 
 export const Home = () => {
   return (

@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&family=Roboto+Mono:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Roboto:wght@100;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
   --header-height: 3rem;
 
   // COLORS
-  --first-color: #0d24e0;
-  --first-color-light: #4b56ad;
-  --second-color: #ec1a21;
-  --second-color-light: #f84046;
-  --third-color: #fcff1c;
+  --first-color: #001b48;
+  --first-color-light: #2897f4;
+  --second-color: #004581;
+  --second-color-light: #018abd;
+  --third-color: #97cbdc;
   --fourth-color: #211e1e;
 
   // FONTS
   --title-font: 'Poppins', sans-serif;
-  --text-font: 'Roboto Mono', monospace;
+  --text-font: 'Montserrat', sans-serif;
 
   // Font Size
   --big-font-size: 2.5rem;
@@ -60,7 +62,7 @@ body {
   font-family: var(--title-font);
   font-size: var(--normal-font-size);
   font-weight: var(--font-meidum);
-  // background-color: var(--fourth-color);
+  // background-color: var(--first-color-light);
   line-height: 1.6;
 }
 
@@ -114,8 +116,8 @@ img {
 .section-subtitle {
   display: block;
   font-family: var(--text-font);
-  font-size: var(--smaller-font-size);
-  margin-bottom: var(--mb-3);
+  font-size: var(--normal-font-size);
+  margin-bottom: var(--mb-5);
 }
 .line {
   height: 50%;
@@ -168,5 +170,23 @@ img {
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding-top: 6rem;
+  }
+  .section-subtitle {
+    margin-bottom: 8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
