@@ -1,7 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './contact.scss';
 
+const ContactBox = ({ title, description, icon }) => {
+  return (
+    <div className='contact-box'>
+      <i className={`bx ${icon} contact-icon`}> </i>
+      <h3 className='contact-title'>{title}</h3>
+      <span className='contact-description'>{description}</span>
+    </div>
+  );
+};
 export const Contact = () => {
   return (
     <section className='contact section bd-container' id='portfolio'>
@@ -12,45 +22,37 @@ export const Contact = () => {
 
       <span className='section-subtitle'>Send me a Message</span>
 
-      <div className='contact_container bd-grid'>
-        <div className='contact_content bd.grid'>
-          <div className='contact_box'>
-            <i className='bx bx-home contact_icon'> </i>
-            <h3 className='contact_title'>Location</h3>
-            <span className='contact_description'>Zumpango, México</span>
-          </div>
+      <div className='contact-container bd-grid'>
+        <div className='contact-content bd-grid'>
+          <ContactBox title='Location' description='Zumpango, México' icon='bx-home' />
+          <ContactBox title='Phone' description='+52 771 414 1066' icon='bx-phone' />
+          <ContactBox title='Email' description='michaelmolins679@gmail.com' icon='bx-envelope' />
 
-          <div className='contact_box'>
-            <i className='bx bx-phone contact_icon'> </i>
-            <h3 className='contact_title'>Phone</h3>
-            <span className='contact_description'>+52 771 414 1066</span>
-          </div>
-
-          <div className='contact_box'>
-            <i className='bx bx-chat contact_icon'> </i>
-            <h3 className='contact_title'>Chat</h3>
+          <div className='contact-box'>
+            <i className='bx bx-chat contact-icon'> </i>
+            <h3 className='contact-title'>Chat</h3>
             <div>
-              <a href='#social' className='contact_social'>
+              <a href='#social' className='contact-social'>
                 <i className='bx bxl-whatsapp-square'></i>
               </a>
-              <a href='#social' className='contact_social'>
+              <a href='#social' className='contact-social'>
                 <i className='bx bxl-telegram'></i>
               </a>
-              <a href='#social' className='contact_social'>
+              <a href='#social' className='contact-social'>
                 <i className='bx bxl-twitter'></i>
               </a>
             </div>
           </div>
         </div>
 
-        <form action='' className='contact_form'>
-          <div className='contact_inputs'>
-            <input type='text' placeholder='Name' className='contact_input' />
-            <input type='email' placeholder='Emial' className='contact_input' />
+        <form action='' className='contact-form'>
+          <div className='contact-inputs'>
+            <input type='text' placeholder='Name' className='contact-input' />
+            <input type='email' placeholder='Emial' className='contact-input' />
           </div>
-          <div className='contact_inputs'>
-            <input type='text' placeholder='Subject' className='contact_input' />
-            <input type='number' placeholder='Number' className='contact_input' />
+          <div className='contact-inputs'>
+            <input type='text' placeholder='Subject' className='contact-input' />
+            <input type='number' placeholder='Number' className='contact-input' />
           </div>
           <textarea
             name=''
@@ -58,11 +60,23 @@ export const Contact = () => {
             cols='0'
             rows='7'
             placeholder='Message'
-            className='contact_input'
+            className='contact-input'
           ></textarea>
-          <input type='submit' value='Send Message' className='button contact_button' />
+          <input type='submit' value='Send Message' className='button button-1 contact-button' />
         </form>
       </div>
     </section>
   );
+};
+
+ContactBox.propTypes = {
+  title: PropTypes.string.isRequired,
+};
+
+ContactBox.propTypes = {
+  description: PropTypes.string.isRequired,
+};
+
+ContactBox.propTypes = {
+  icon: PropTypes.string.isRequired,
 };

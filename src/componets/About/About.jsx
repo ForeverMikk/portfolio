@@ -15,15 +15,12 @@ const Achievement = ({ number, achiev }) => {
 export const About = () => {
   return (
     <section className='about section bd-container' id='about'>
-      {/* Title */}
       <div className='title-box'>
         <div className='line'> </div>
         <h2 className='section-title'>About me</h2>
       </div>
-      {/* Subtitle */}
       <span className='section-subtitle'>My History</span>
 
-      {/* About Container */}
       <div className='about-container bd-grid'>
         <div className='about-data bd-grid'>
           <p className='about-description'>

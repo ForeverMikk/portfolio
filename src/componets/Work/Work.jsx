@@ -25,12 +25,10 @@ const WorkQualification = ({ title, project, date, icon }) => {
 export const Work = () => {
   return (
     <section className='work section bd-container' id='work'>
-      {/* Title */}
       <div className='title-box'>
         <div className='line'> </div>
         <h2 className='section-title'>Experience & Education</h2>
       </div>
-      {/* Subtitle */}
       <span className='section-subtitle'>Qualifications</span>
 
       <div className='work-container bd-grid'>
@@ -42,14 +40,14 @@ export const Work = () => {
 
           <div className='bd-grid'>
             <WorkQualification
-              title='Junior Frontend Developer'
+              title='Jr. Frontend Developer'
               project='Balché Nikté - Full Website UI'
               date='Jan 2020 - Oct 2020'
               icon='bx-briefcase-alt'
             />
 
             <WorkQualification
-              title='Junior Frontend Developer'
+              title='Jr. Fullstack Developer'
               project=' Leia MX - Hackathon App UI'
               date='Jan 2019 - Dic 2019'
               icon='bx-briefcase-alt'
@@ -86,15 +84,12 @@ export const Work = () => {
 WorkQualification.propTypes = {
   title: PropTypes.string.isRequired,
 };
-
 WorkQualification.propTypes = {
   project: PropTypes.string.isRequired,
 };
-
 WorkQualification.propTypes = {
   date: PropTypes.string.isRequired,
 };
-
 WorkQualification.propTypes = {
   icon: PropTypes.string.isRequired,
 };
