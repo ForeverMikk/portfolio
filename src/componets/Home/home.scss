@@ -41,6 +41,8 @@
 }
 .home-img img {
   width: 240px;
+  // border-radius: 0.25rem;
+  // opacity: 0.8;
   // background: rgba($color: #fff, $alpha: 1);
 }
 
@@ -48,15 +50,20 @@
 .home-social {
   display: flex;
   flex-direction: column;
+  // border-left: 4px solid var(--sec-color);
 }
 .home-social-icon {
   width: max-content;
   font-size: 1.3rem;
+  border-left: 3px solid var(--second-color);
+  padding-left: 0.5rem;
   margin-bottom: var(--mb-2);
   color: var(--fourth-color);
+  transition: 0.4s;
 }
 .home-social-icon:hover {
-  color: var(--fir);
+  color: var(--first-color);
+  // border-left: 3px solid var(--fourth-color);
 }
 
 /* ===== Buttons ===== */

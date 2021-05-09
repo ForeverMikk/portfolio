@@ -1,41 +1,52 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import about_img from './../../assets/img/about-img.jpg';
 import './about.scss';
+import about_img from './../../assets/img/about-img.jpg';
 
+const Achievement = ({ number, achiev }) => {
+  return (
+    <div className='achievement'>
+      <div className='about-number'>{number}</div>
+      <div className='about-achievement'>{achiev}</div>
+    </div>
+  );
+};
 export const About = () => {
   return (
-    <section className='about bd-container' id='about'>
+    <section className='about section bd-container' id='about'>
+      {/* Title */}
       <div className='title-box'>
         <div className='line'> </div>
         <h2 className='section-title'>About me</h2>
       </div>
+      {/* Subtitle */}
       <span className='section-subtitle'>My History</span>
+
+      {/* About Container */}
       <div className='about-container bd-grid'>
-        <div className='about-data bdgrid'>
+        <div className='about-data bd-grid'>
           <p className='about-description'>
             <span>Hello, I am</span>
             <br />
-            Frontend Developer, Gekk & hardware enthusiast always looking for new challenges about
-            creating and developing web interfaces
+            Frontend Developer, Gekk & Hardware enthusiast always looking for new challenges about
+            creating and developing my abilities as a <strong>Web Developer</strong> and Person
           </p>
-        </div>
-        {/* <AboutItem /> */}
-        <div>
-          <span className='about-number'>23</span>
-          <span className='about-achievement'>Age</span>
-        </div>
-        <div>
-          <span className='about-number'>2</span>
-          <span className='about-achievement'>Years of Experience</span>
-        </div>
-        <div>
-          <span className='about-number'>5</span>
-          <span className='about-achievement'>Projects</span>
+          <Achievement number={25} achiev='Age' />
+          <Achievement number={2} achiev='Years of Experience' />
+          <Achievement number={5} achiev='Finished Projects' />
         </div>
 
         <img src={about_img} alt='' className='about-img' />
       </div>
     </section>
   );
+};
+
+Achievement.propTypes = {
+  number: PropTypes.number.isRequired,
+};
+
+Achievement.propTypes = {
+  achiev: PropTypes.string.isRequired,
 };
