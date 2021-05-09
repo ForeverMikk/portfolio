@@ -1,106 +1,100 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './work.scss';
 
+const WorkQualification = ({ title, project, date, icon }) => {
+  return (
+    <div className='work-data'>
+      <h3 className='work-area'>{title}</h3>
+      <div className='work-box'>
+        <span className='work-company'>
+          <i className={`bx ${icon} work-icon`}></i>
+          {project}
+        </span>
+
+        <span className='work-company'>
+          <i className='bx bx-calendar-alt work-icon'></i>
+          {date}
+        </span>
+      </div>
+    </div>
+  );
+};
+
 export const Work = () => {
   return (
-    <>
-      <section className='section bd-container'>
-        <div className='title-box'>
-          <div className='line'> </div>
-          <h2 className='section-title'>Experience & Education</h2>
-        </div>
+    <section className='work section bd-container' id='work'>
+      {/* Title */}
+      <div className='title-box'>
+        <div className='line'> </div>
+        <h2 className='section-title'>Experience & Education</h2>
+      </div>
+      {/* Subtitle */}
+      <span className='section-subtitle'>Qualifications</span>
 
-        <div className='work-contariner bd-grid'>
-          <div className='work-content'>
-            <h2 className='work-title'>
-              <i className='bx bx-briefcase-alt work-title-icon'></i>
-              Work Experience
-            </h2>
+      <div className='work-container bd-grid'>
+        <div className='work-content'>
+          <h2 className='work-title'>
+            <i className='bx bx-briefcase-alt work-title-icon'></i>
+            Work Experience
+          </h2>
 
-            <div className='bd-grid'>
-              <div className='work-data'>
-                <h3 className='work-area'>Junior Frontend Developer</h3>
-                <div className='work-box'>
-                  <span className='work-company'>
-                    <i className='bx bx-briefcase-alt work-icon'></i>
-                    Balché Nikte - Full Website UI
-                  </span>
-                  <span className='work-company'>
-                    <i className='bx bx-calendar-alt work-icon'></i>
-                    Jan 2020 - Oct 2020
-                  </span>
-                </div>
-              </div>
+          <div className='bd-grid'>
+            <WorkQualification
+              title='Junior Frontend Developer'
+              project='Balché Nikté - Full Website UI'
+              date='Jan 2020 - Oct 2020'
+              icon='bx-briefcase-alt'
+            />
 
-              <div className='work-data'>
-                <h3 className='work-area'>Junior Frontend Developer</h3>
-                <div className='work-box'>
-                  <span className='work-company'>
-                    <i className='bx bx-briefcase-alt work-icon'></i>
-                    Leia MX - Hackathon App UI
-                  </span>
-                  <span className='work-company'>
-                    <i className='bx bx-calendar-alt work-icon'></i>
-                    Jan 2019 - Dic 2019
-                  </span>
-                </div>
-              </div>
-
-              <div className='work-data'>
-                <h3 className='work-area'>Junior Frontend Developer</h3>
-                <div className='work-box'>
-                  <span className='work-company'>
-                    <i className='bx bx-briefcase-alt work-icon'></i>
-                    Balché Nikte
-                  </span>
-                  <span className='work-company'>
-                    <i className='bx bx-calendar-alt work-icon'></i>
-                    Jan 2020 - Oct 2020
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className='work-content'>
-            <h2 className='work-title'>
-              <i className='bx bx-bookmark work-title-icon'></i>
-              Education
-            </h2>
-
-            <div className='bd-grid'>
-              <div className='work-data'>
-                <h3 className='work-area'>Computer Enginner</h3>
-                <div className='work-box'>
-                  <span className='work-company'>
-                    <i className='bx bx-book-alt work-icon'></i>
-                    UAEH - Univercity of Hidalgo Satate
-                  </span>
-                  <span className='work-company'>
-                    <i className='bx bx-calendar-alt work-icon'></i>
-                    2015 - 2019
-                  </span>
-                </div>
-              </div>
-
-              <div className='work-data'>
-                <h3 className='work-area'>Programming Technician</h3>
-                <div className='work-box'>
-                  <span className='work-company'>
-                    <i className='bx bx-book-alt work-icon'></i>
-                    CECyTEM
-                  </span>
-                  <span className='work-company'>
-                    <i className='bx bx-calendar-alt work-icon'></i>
-                    2012 - 2015
-                  </span>
-                </div>
-              </div>
-            </div>
+            <WorkQualification
+              title='Junior Frontend Developer'
+              project=' Leia MX - Hackathon App UI'
+              date='Jan 2019 - Dic 2019'
+              icon='bx-briefcase-alt'
+            />
           </div>
         </div>
-      </section>
-    </>
+
+        <div className='work-content'>
+          <h2 className='work-title'>
+            <i className='bx bx-bookmark work-title-icon'></i>
+            Education
+          </h2>
+
+          <div className='bd-grid'>
+            <WorkQualification
+              title='Computer Enginner'
+              project='UAEH - Univercity of Hidalgo Satate'
+              date='2015 - 2019'
+              icon='bx-book-alt'
+            />
+            <WorkQualification
+              title='Programming Technician'
+              project='CECyTEM'
+              date='2012 - 2015'
+              icon='bx-book-alt'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   );
+};
+
+WorkQualification.propTypes = {
+  title: PropTypes.string.isRequired,
+};
+
+WorkQualification.propTypes = {
+  project: PropTypes.string.isRequired,
+};
+
+WorkQualification.propTypes = {
+  date: PropTypes.string.isRequired,
+};
+
+WorkQualification.propTypes = {
+  icon: PropTypes.string.isRequired,
 };

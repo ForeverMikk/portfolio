@@ -1,31 +1,29 @@
 /* ========== Wokr Experiende Styles ==========*/
-
 .work-container {
   row-gap: 2.5rem;
+  text-align: left;
 }
-
 .work-title {
   font-size: var(--h3-font-size);
-  color: var(--first-color);
+  color: var(--second-color-light);
   margin-bottom: var(--mb-2);
   display: flex;
   align-items: center;
 }
-
 .work-title-icon {
   font-size: 1.5rem;
+  color: var(--fourth-color);
   margin-right: var(--mb-1);
 }
 
 .work-box {
+  // text-align: left;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
   font-family: var(--text-font);
 }
 
 .work-area {
-  //   font-family: var(--text-font);
-  //   font-weight: 500;
   font-size: var(--h3-font-size);
   color: var(--first-color);
   margin-bottom: var(--mb-1);
@@ -35,7 +33,7 @@
 .work-icon,
 .work-company {
   font-size: var(--smaller-font-size);
-  color: #211e1e;
+  color: var(--fourth-color);
 }
 
 .work-icon {
