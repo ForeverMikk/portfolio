@@ -1,7 +1,3 @@
-.nav-img {
-  width: 3rem;
-  height: auto;
-}
 .l-header {
   width: 100%;
   position: fixed;
@@ -43,6 +39,10 @@
 }
 .nav-toggle:hover {
   color: var(--third-color);
+}
+.nav-img {
+  width: 3rem;
+  height: auto;
 }
 
 /**** Show Menu ****/

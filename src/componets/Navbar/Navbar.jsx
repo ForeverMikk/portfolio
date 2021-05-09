@@ -1,12 +1,19 @@
-// import React, { Fragment } from 'react'; //Esto es en caso de Esribir la etiqueta Fragment
-// No es necesario puedes hacerlo con los puros signos sin abrir nada
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import logo from './../../assets/img/logo.png';
-// import github from './../../assets/img/github.png';
-// import twitter from '../../assets/img/twitter.png';
 
 import './navbar.scss';
+
+const NavItem = ({ title }) => {
+  return (
+    <li className='nav-item'>
+      <a href='#about' className='nav-link'>
+        {title}
+      </a>
+    </li>
+  );
+};
 
 export const Navbar = () => {
   const [hideNavbar, setHideNavbar] = useState(false);
@@ -21,26 +28,11 @@ export const Navbar = () => {
 
           <div className={`nav-menu ${hideNavbar ? 'hide' : ''}`} id='nav-menu'>
             <ul className='nav-list'>
-              <li className='nav-item'>
-                <a href='#about' className='nav-link'>
-                  About me
-                </a>
-              </li>
-              <li className='nav-item'>
-                <a href='#portfolio' className='nav-link'>
-                  My work
-                </a>
-              </li>
-              <li className='nav-item'>
-                <a href='#services' className='nav-link'>
-                  Services
-                </a>
-              </li>
-              <li className='nav-item'>
-                <a href='#contact' className='nav-link'>
-                  Contact me
-                </a>
-              </li>
+              <NavItem title='About me' />
+              <NavItem title='My work' />
+              <NavItem title='Portfolio' />
+              <NavItem title='Services' />
+              <NavItem title='Contact me' />
             </ul>
           </div>
 
@@ -57,4 +49,8 @@ export const Navbar = () => {
       </header>
     </>
   );
+};
+
+NavItem.propTypes = {
+  title: PropTypes.string.isRequired,
 };

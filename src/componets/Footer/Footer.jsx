@@ -15,10 +15,7 @@ export const Footer = () => {
     <footer className='footer'>
       <div className='footer-container bd-container'>
         <h1 className='footer-title'>Michael Molina</h1>
-        <p className='footer-description'>
-          Frontend Developer,Gekk & hardware enthusiast always looking for new challenges about
-          creating and developing web interfaces
-        </p>
+        <p className='footer-description'>Frontend Developer,Gekk & hardware enthusiast</p>
 
         <div className='footer-social'>
           <FooterLink icon='bxl-linkedin' />
