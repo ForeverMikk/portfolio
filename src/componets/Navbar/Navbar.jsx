@@ -5,15 +5,14 @@ import logo from './../../assets/img/logo.png';
 
 import './navbar.scss';
 
-const scrollItem = itemId => {
+export const scrollItem = itemId => {
   document.querySelector(`#${itemId}`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });
-  console.log(itemId);
 };
 
 const NavItem = ({ title, itemId }) => {
   return (
     <li className='nav-item'>
-      <a href='#nav' className='nav-link' onClick={() => scrollItem(itemId)}>
+      <a href={`#${itemId}`} className='nav-link' onClick={() => scrollItem(itemId)}>
         {title}
       </a>
     </li>

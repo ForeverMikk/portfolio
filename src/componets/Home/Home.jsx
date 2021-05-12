@@ -3,6 +3,7 @@ import React from 'react';
 import './home.scss';
 import curriculum from './../../assets/pdf/MichaelMolinaCV.pdf';
 import home from './../../assets/img/home2.jpg';
+import { scrollItem } from '../Navbar/Navbar';
 
 export const Home = () => {
   return (
@@ -18,7 +19,7 @@ export const Home = () => {
               <a download='' href={curriculum} className='button button-1'>
                 Download CV
               </a>
-              <a href='/' className='button button-2'>
+              <a href='#about' className='button button-2' onClick={() => scrollItem('header')}>
                 About Me
               </a>
             </div>
