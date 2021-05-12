@@ -8,7 +8,6 @@ import './navbar.scss';
 const scrollItem = id => {
   document.querySelector(`#${id}`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });
   console.log(id);
-  // id = '';
 };
 
 const NavItem = ({ title, itemId }) => {
