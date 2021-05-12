@@ -5,10 +5,16 @@ import logo from './../../assets/img/logo.png';
 
 import './navbar.scss';
 
-const NavItem = ({ title }) => {
+const scrollItem = id => {
+  document.querySelector(`#${id}`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  console.log(id);
+  // id = '';
+};
+
+const NavItem = ({ title, itemId }) => {
   return (
     <li className='nav-item'>
-      <a href='#about' className='nav-link'>
+      <a href='#about' className='nav-link' onClick={() => scrollItem(itemId)}>
         {title}
       </a>
     </li>
@@ -22,17 +28,17 @@ export const Navbar = () => {
     <>
       <header className='header l-header' id='header'>
         <nav className='nav bd-container'>
-          <a href='#home' className='nav-logo'>
+          <a href='#home' className='nav-logo' onClick={() => scrollItem('header')}>
             <img src={logo} alt='' className='nav-img' />
           </a>
 
           <div className={`nav-menu ${hideNavbar ? 'hide' : ''}`} id='nav-menu'>
             <ul className='nav-list'>
-              <NavItem title='About me' />
-              <NavItem title='My work' />
-              <NavItem title='Portfolio' />
-              <NavItem title='Services' />
-              <NavItem title='Contact me' />
+              <NavItem title='About me' itemId='about' />
+              <NavItem title='My work' itemId='work' />
+              <NavItem title='Portfolio' itemId='portfolio' />
+              <NavItem title='Services' itemId='services' />
+              <NavItem title='Contact me' itemId='contact' />
             </ul>
           </div>
 
@@ -53,4 +59,5 @@ export const Navbar = () => {
 
 NavItem.propTypes = {
   title: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
 };

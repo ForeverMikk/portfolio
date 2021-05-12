@@ -20,9 +20,10 @@ const ContactSocial = ({ icon }) => {
     </a>
   );
 };
+
 export const Contact = () => {
   return (
-    <section className='contact section bd-container' id='portfolio'>
+    <section className='contact section bd-container' id='contact'>
       <div className='title-box'>
         <div className='line'> </div>
         <h2 className='section-title'>Contact me</h2>
@@ -73,13 +74,7 @@ export const Contact = () => {
 
 ContactBox.propTypes = {
   title: PropTypes.string.isRequired,
-};
-
-ContactBox.propTypes = {
   description: PropTypes.string.isRequired,
-};
-
-ContactBox.propTypes = {
   icon: PropTypes.string.isRequired,
 };
 

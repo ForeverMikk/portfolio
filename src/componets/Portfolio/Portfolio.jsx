@@ -64,10 +64,6 @@ export const Portfolio = () => {
 
 PortfolioItem.propTypes = {
   title: PropTypes.string.isRequired,
-};
-PortfolioItem.propTypes = {
   description: PropTypes.string.isRequired,
-};
-PortfolioItem.propTypes = {
   img: PropTypes.any.isRequired,
 };

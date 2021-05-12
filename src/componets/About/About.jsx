@@ -42,8 +42,5 @@ export const About = () => {
 
 Achievement.propTypes = {
   number: PropTypes.number.isRequired,
-};
-
-Achievement.propTypes = {
   achiev: PropTypes.string.isRequired,
 };

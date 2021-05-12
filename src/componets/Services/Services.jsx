@@ -49,10 +49,6 @@ export const Services = () => {
 
 ServiceContainer.propTypes = {
   title: PropTypes.string.isRequired,
-};
-ServiceContainer.propTypes = {
   description: PropTypes.string.isRequired,
-};
-ServiceContainer.propTypes = {
   icon: PropTypes.string.isRequired,
 };

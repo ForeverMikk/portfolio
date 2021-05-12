@@ -83,13 +83,7 @@ export const Work = () => {
 
 WorkQualification.propTypes = {
   title: PropTypes.string.isRequired,
-};
-WorkQualification.propTypes = {
   project: PropTypes.string.isRequired,
-};
-WorkQualification.propTypes = {
   date: PropTypes.string.isRequired,
-};
-WorkQualification.propTypes = {
   icon: PropTypes.string.isRequired,
 };
