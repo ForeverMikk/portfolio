@@ -23,35 +23,33 @@ export const Navbar = () => {
   const [hideNavbar, setHideNavbar] = useState(false);
 
   return (
-    <>
-      <header className='header l-header' id='header'>
-        <nav className='nav bd-container'>
-          <a href='#home' className='nav-logo' onClick={() => scrollItem('header')}>
-            <img src={logo} alt='' className='nav-img' />
-          </a>
+    <header className='header l-header' id='header'>
+      <nav className='nav bd-container'>
+        <a href='#home' className='nav-logo' onClick={() => scrollItem('header')}>
+          <img src={logo} alt='' className='nav-img' />
+        </a>
 
-          <div className={`nav-menu ${hideNavbar ? 'hide' : ''}`} id='nav-menu'>
-            <ul className='nav-list'>
-              <NavItem title='About me' itemId='about' />
-              <NavItem title='My work' itemId='work' />
-              <NavItem title='Portfolio' itemId='portfolio' />
-              <NavItem title='Services' itemId='services' />
-              <NavItem title='Contact me' itemId='contact' />
-            </ul>
-          </div>
+        <div className={`nav-menu ${hideNavbar ? 'hide' : ''}`} id='nav-menu'>
+          <ul className='nav-list'>
+            <NavItem title='About me' itemId='about' />
+            <NavItem title='My work' itemId='work' />
+            <NavItem title='Portfolio' itemId='portfolio' />
+            <NavItem title='Services' itemId='services' />
+            <NavItem title='Contact me' itemId='contact' />
+          </ul>
+        </div>
 
-          <button
-            id='toggle'
-            className='nav-toggle'
-            onClick={() => {
-              setHideNavbar(!hideNavbar);
-            }}
-          >
-            <i className='bx bx-menu'></i>
-          </button>
-        </nav>
-      </header>
-    </>
+        <button
+          id='toggle'
+          className='nav-toggle'
+          onClick={() => {
+            setHideNavbar(!hideNavbar);
+          }}
+        >
+          <i className='bx bx-menu'></i>
+        </button>
+      </nav>
+    </header>
   );
 };
 

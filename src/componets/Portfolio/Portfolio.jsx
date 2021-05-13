@@ -9,7 +9,7 @@ import work4 from './../../assets/img/work4.jpg';
 // import work6 from './../../assets/img/work6.jpg';
 import './portfolio.scss';
 
-const PortfolioItem = ({ title, description, img }) => {
+const PortfolioItem = ({ title, description, img, link }) => {
   return (
     <div className='portfolio-content'>
       <a href='#work1'>
@@ -20,7 +20,7 @@ const PortfolioItem = ({ title, description, img }) => {
         <a href='#title'>
           <h2 className='portfolio-title'>{description}</h2>
         </a>
-        <a href='#button' className='button button-1'>
+        <a href={`${link}`} target='blank' className='button button-1'>
           View Details
         </a>
       </div>
@@ -38,24 +38,28 @@ export const Portfolio = () => {
 
       <div className='portfolio-container bd-grid'>
         <PortfolioItem
-          title='Web Development'
-          description='New Portfolio of work donde for a client'
+          title='React JS, Giphy API'
+          description='Gif Expert App - an app builded to show you your favorite gifs'
           img={work1}
+          link='https://forevermikk.github.io/gif-expert-app/'
         />
         <PortfolioItem
-          title='Web Development'
-          description='New Portfolio of work donde for a client'
+          title='HTML, CSS & JavaScript'
+          description='Balché Nikte - Website focused on skin care products'
           img={work2}
+          link='https://torpid-hot-socks.glitch.me/'
         />
         <PortfolioItem
-          title='Web Development'
-          description='New Portfolio of work donde for a client'
-          img={work3}
-        />
-        <PortfolioItem
-          title='Web Development'
-          description='New Portfolio of work donde for a client'
+          title='HTML, CSS & JavaScript'
+          description='Hackathon App -  tool for the creation and management of hackathons'
           img={work4}
+          link='https://github.com/ForeverMikk/hackathon-front'
+        />
+        <PortfolioItem
+          title='Ionic, Laravel'
+          description='Tlali - Miltiplatform app  for the monitoring and maintenance of a bio-intensive orchard'
+          img={work3}
+          link='https://github.com/ForeverMikk/tlali-v4'
         />
       </div>
     </section>
@@ -66,4 +70,5 @@ PortfolioItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   img: PropTypes.any.isRequired,
+  link: PropTypes.string.isRequired,
 };

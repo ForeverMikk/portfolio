@@ -42,14 +42,14 @@ export const Work = () => {
             <WorkQualification
               title='Jr. Frontend Developer'
               project='Balché Nikté - Full Website UI'
-              date='Jan 2020 - Oct 2020'
+              date='May 2020 - Agu 2020'
               icon='bx-briefcase-alt'
             />
 
             <WorkQualification
-              title='Jr. Fullstack Developer'
+              title='Jr. Web Developer'
               project=' Leia MX - Hackathon App UI'
-              date='Jan 2019 - Dic 2019'
+              date='Jan 2019 - Dec 2019'
               icon='bx-briefcase-alt'
             />
           </div>

@@ -30,7 +30,7 @@ export const About = () => {
             creating and developing my abilities as a <strong>Web Developer</strong> and Person
           </p>
           <Achievement number={25} achiev='Age' />
-          <Achievement number={2} achiev='Years of Experience' />
+          <Achievement number={1.5} achiev='Years of Experience' />
           <Achievement number={5} achiev='Finished Projects' />
         </div>
 
