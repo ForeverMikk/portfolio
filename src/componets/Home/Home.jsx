@@ -1,10 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './home.scss';
 import curriculumEng from './../../assets/pdf/resume.pdf';
 import curriculumEsp from './../../assets/pdf/curriculum.pdf';
 import home from './../../assets/img/home2.jpg';
-// import { scrollItem } from '../Navbar/Navbar';
+
+const HomeButton = ({ link, buttonStyle, text }) => {
+  return (
+    <a download='' href={link} className={`button ${buttonStyle}`}>
+      {text}
+    </a>
+  );
+};
+
+const HomeIcon = ({ link, icon }) => {
+  return (
+    <a href={`${link}`} target='blank' className='home-social-icon'>
+      <i className={`bx ${icon}`}></i>
+    </a>
+  );
+};
 
 export const Home = () => {
   return (
@@ -14,32 +30,21 @@ export const Home = () => {
           <div className='home-data'>
             <span className='home-text'>Hello, My Name is</span>
             <h1 className='home-name'>Michael Molina</h1>
-            <span className='home-profession'>Web Developer & Geek</span>
+            <span className='home-profession'>Web Developer</span>
 
             <div className='buttons'>
-              <a download='' href={curriculumEng} className='button button-1'>
-                Resume (ENG)
-              </a>
-
-              <a download='' href={curriculumEsp} className='button button-2'>
-                CV (ESP)
-              </a>
+              <HomeButton link={curriculumEng} buttonStyle='button-1' text='Resume (ENG)' />
+              <HomeButton link={curriculumEsp} buttonStyle='button-2' text='CV (ESP)' />
             </div>
           </div>
+
           <div className='home-social'>
-            <a href='https://twitter.com/ForeverMikk/' target='blank' className='home-social-icon'>
-              <i className='bx bxl-twitter'></i>
-            </a>
-            <a
-              href='https://www.linkedin.com/in/michael-molina-2582a9100'
-              target='blank'
-              className='home-social-icon'
-            >
-              <i className='bx bxl-linkedin'></i>
-            </a>
-            <a href='https://github.com/ForeverMikk' target='blank' className='home-social-icon'>
-              <i className='bx bxl-github'></i>
-            </a>
+            <HomeIcon
+              link='https://www.linkedin.com/in/michael-molina-2582a9100'
+              icon='bxl-linkedin'
+            />
+            <HomeIcon link='https://twitter.com/ForeverMikk/' icon='bxl-twitter' />
+            <HomeIcon link='https://github.com/ForeverMikk' icon='bxl-github' />
           </div>
 
           <div className='home-img'>
@@ -49,4 +54,15 @@ export const Home = () => {
       </section>
     </>
   );
+};
+
+HomeIcon.propTypes = {
+  link: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+};
+
+HomeButton.propTypes = {
+  link: PropTypes.any.isRequired,
+  buttonStyle: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
