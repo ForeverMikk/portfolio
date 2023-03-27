@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './home.scss';
+import './Home.scss';
 import curriculumEng from './../../assets/pdf/resume.pdf';
 import curriculumEsp from './../../assets/pdf/curriculum.pdf';
 import home from './../../assets/img/home2.jpg';
@@ -28,9 +28,10 @@ export const Home = () => {
       <section className='home' id='home'>
         <div className='home-container bd-container bd-grid'>
           <div className='home-data'>
-            <span className='home-text'>Hello, My Name is</span>
-            <h1 className='home-name'>Michael Molina</h1>
-            <span className='home-profession'>Web Developer</span>
+            <span className='home-text'>Nice to meet you</span>
+            <h1 className='home-name'>
+              I am <span className='home-profession'>Michael Molina</span>
+            </h1>
 
             <div className='buttons'>
               <HomeButton link={curriculumEng} buttonStyle='button-1' text='Resume (ENG)' />

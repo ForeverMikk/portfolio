@@ -10,18 +10,17 @@
   row-gap: 2rem;
 }
 .home-data {
-  border-left: 4px solid var(--third-color);
+  border-left: 4px solid var(--yellow);
   padding-left: 1.5rem;
   // z-index: var(--z-tooltip);
 }
 .home-name {
-  color: var(--first-color);
+  color: var(--green);
   font-size: 2rem;
   font-weight: 700;
 }
 .home-text,
 .home-profession {
-  font-family: var(--text-font);
   display: block;
   font-weight: var(--font-meidum);
 }
@@ -42,29 +41,25 @@
 .home-img img {
   width: 240px;
   transition: 0.4s;
-  // border-radius: 0.25rem;
-  // opacity: 0.8;
-  // background: rgba($color: #fff, $alpha: 1);
 }
 
 /* ===== Social Icons ===== */
 .home-social {
   display: flex;
   flex-direction: column;
-  // border-left: 4px solid var(--sec-color);
 }
 .home-social-icon {
   width: max-content;
   font-size: 1.3rem;
-  border-left: 3px solid var(--second-color);
+  border-left: 3px solid var(--blue);
   padding-left: 0.5rem;
   margin-bottom: var(--mb-2);
-  color: var(--fourth-color);
-  transition: 0.4s;
+  color: var(--white);
+  transition: all ease-in-out 0.3s;
 }
 .home-social-icon:hover {
-  color: var(--first-color);
-  // border-left: 3px solid var(--fourth-color);
+  color: var(--green);
+  border-left: 3px solid var(--yellow);
 }
 
 /* ===== Buttons ===== */

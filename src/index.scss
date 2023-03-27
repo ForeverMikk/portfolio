@@ -169,17 +169,17 @@ img {
   transition: 0.3s;
   border-radius: 0.25rem;
 }
-.button-1 {
-  background-color: var(--first-color);
-  color: #fff;
+.button {
+  background-color: var(--green);
+  color: #000;
   border: 1px solid;
-  border-color: var(--first-color);
+  border-color: var(--green);
 }
-.button-1:hover {
+.button:hover {
   background-color: #fff;
-  color: var(--first-color);
+  color: var(--green);
   border: 1px solid;
-  border-color: var(--first-color);
+  border-color: var(--green);
 }
 
 @media screen and (min-width: 1024px) {
