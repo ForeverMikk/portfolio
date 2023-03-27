@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import logo from './../../assets/img/logo.png';
-
 import './navbar.scss';
 
 export const scrollItem = itemId => {
@@ -26,7 +24,7 @@ export const Navbar = () => {
     <header className='header l-header' id='header'>
       <nav className='nav bd-container'>
         <a href='#home' className='nav-logo' onClick={() => scrollItem('header')}>
-          <img src={logo} alt='' className='nav-img' />
+          michael molina
         </a>
 
         <div className={`nav-menu ${hideNavbar ? 'hide' : ''}`} id='nav-menu'>

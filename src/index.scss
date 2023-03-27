@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --header-height: 3rem;
+  --header-height: 4rem;
 
   // COLORS
   --black: #151515;
@@ -57,9 +57,6 @@
   --z-normal: 1;
   --z-tooltip: 10;
   --z-fixed: 100;
-
-  // CONTAINER
-  --container: 69.375;
 }
 
 /* ===== Global Styles ===== */
@@ -122,8 +119,6 @@ img {
 
 /* ===== Section Styles ===== */
 .section {
-  width: calc(100% - 2rem);
-  max-width: var(--container);
   text-align: center;
   margin-inline: auto;
 }
