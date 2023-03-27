@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
   --header-height: 3rem;
 
   // COLORS
-  // --first-color: #001b48;
-  // --first-color-light: #2897f4;
-  // --second-color: #004581;
-  // --second-color-light: #018abd;
-  // --third-color: #97cbdc;
-  // --fourth-color: #211e1e;
+  --black: #151515;
+  --green: #4ee1a0;
+  --dark-gray: rgb(36, 36, 36);
+  --text1: #fff;
+  --text2: #d9d9d9;
+  --blue: #4486d9;
+  --yellow: #ffcc5a;
+  --red: #ff6f5b;
 
-  // COLORS
   --first-color: #161a52;
   --first-color-light: #ffcc5a;
   --second-color: #fe4b87;
@@ -21,15 +23,19 @@
   --fourth-color: #211e1e;
 
   // FONTS
-  --title-font: 'Poppins', sans-serif;
+  --title-font: 'Space Grotesk', sans-serif;
   --text-font: 'Montserrat', sans-serif;
 
   // Font Size
+  --fs-text: 1.125rem;
+  --fs-title: 5.5rem;
+  --fs-subtitle: 3rem;
+  --fs-header: 1.5rem;
+
   --big-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
-  --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
@@ -51,6 +57,9 @@
   --z-normal: 1;
   --z-tooltip: 10;
   --z-fixed: 100;
+
+  // CONTAINER
+  --container: 69.375;
 }
 
 /* ===== Global Styles ===== */
@@ -66,11 +75,13 @@ html {
 
 body {
   margin: var(--header-height) 0 0 0;
-  font-family: var(--title-font);
-  font-size: var(--normal-font-size);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--fs-body);
   font-weight: var(--font-meidum);
-  // background-color: var(--first-color-light);
-  line-height: 1.6;
+  line-height: 1.56;
+
+  background-color: var(--black);
+  color: var(--text1);
 }
 
 h1,
@@ -83,7 +94,15 @@ p {
 
 h2,
 h3 {
-  font-weight: var(--font-semibold);
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text2);
 }
 
 ul {
@@ -103,8 +122,10 @@ img {
 
 /* ===== Section Styles ===== */
 .section {
-  padding: 4rem 0 2rem;
+  width: calc(100% - 2rem);
+  max-width: var(--container);
   text-align: center;
+  margin-inline: auto;
 }
 .title-box {
   display: inline-block;
@@ -116,7 +137,7 @@ img {
 }
 .section-title {
   font-size: var(--h1-font-size);
-  color: var(--fourth-color);
+  // color: var(--fourth-color);
   position: relative;
   z-index: 1;
 }
@@ -166,7 +187,13 @@ img {
   border-color: var(--first-color);
 }
 
-/* ==== Global Media Querys ==== */
+@media screen and (min-width: 1024px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   :root {
     // Font Size
@@ -177,6 +204,12 @@ img {
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
+
+    // Font Size
+    --fs-text: 1.125rem;
+    --fs-title: 4.5rem;
+    --fs-subtitle: 2.5rem;
+    --fs-header: 1.25rem;
   }
   body {
     margin: 0;
@@ -189,9 +222,13 @@ img {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .bd-container {
-    margin-left: auto;
-    margin-right: auto;
+/* 600px */
+@media screen and (min-width: 37.5rem) {
+  .section {
+    width: calc(100% - 3.75rem);
   }
+}
+
+//
+@media screen and (min-width: 37.5rem) {
 }
