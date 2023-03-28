@@ -30,7 +30,7 @@ export const Home = () => {
           <div className='home-data'>
             <span className='home-text'>Nice to meet you</span>
             <h1 className='home-name'>
-              I am <span>Michael Molina</span>
+              Hola que hace I am <span>Michael Molina</span>
             </h1>
 
             <div className='buttons'>
