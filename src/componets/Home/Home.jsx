@@ -25,29 +25,32 @@ const HomeIcon = ({ link, icon }) => {
 export const Home = () => {
   return (
     <>
-      <section className='home' id='home'>
-        <img src={home} alt='' />
-
-        <div className='home-container bd-container bd-grid'>
+      <section className='home bd-container bd-grid' id='home'>
+        <div className='home-container '>
           <div className='home-data'>
             <span className='home-text'>Nice to meet you</span>
             <h1 className='home-name'>
-              Hola que I am <span>Michael Molina</span>
+              I am <span>Michael Molina</span>
             </h1>
 
             <div className='buttons'>
               <HomeButton link={curriculumEng} buttonStyle='button-1' text='Resume (ENG)' />
               <HomeButton link={curriculumEsp} buttonStyle='button-2' text='CV (ESP)' />
             </div>
-            <div className='home-social'>
-              <HomeIcon
-                link='https://www.linkedin.com/in/michael-molina-2582a9100'
-                icon='bxl-linkedin'
-              />
-              <HomeIcon link='https://twitter.com/ForeverMikk/' icon='bxl-twitter' />
-              <HomeIcon link='https://github.com/ForeverMikk' icon='bxl-github' />
-            </div>
           </div>
+
+          <div className='home-social'>
+            <HomeIcon
+              link='https://www.linkedin.com/in/michael-molina-2582a9100'
+              icon='bxl-linkedin'
+            />
+            <HomeIcon link='https://twitter.com/ForeverMikk/' icon='bxl-twitter' />
+            <HomeIcon link='https://github.com/ForeverMikk' icon='bxl-github' />
+          </div>
+        </div>
+
+        <div className='home-img'>
+          <img src={home} alt='' />
         </div>
       </section>
     </>
