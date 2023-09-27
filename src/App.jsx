@@ -1,4 +1,3 @@
-import React from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 
 import './index.scss';
@@ -11,7 +10,7 @@ import { Services } from './componets/Services/Services';
 import { Contact } from './componets/Contact/Contact';
 import { Footer } from './componets/Footer/Footer';
 
-export const App = () => {
+const App = () => {
   return (
     <>
       <ScrollToTop smooth />
@@ -26,3 +25,5 @@ export const App = () => {
     </>
   );
 };
+
+export default App;

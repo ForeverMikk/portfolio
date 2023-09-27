@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
 import work1 from './../../assets/img/work1.jpg';
@@ -70,7 +69,7 @@ const PortfolioItem = ({ title, description, img, github, link }) => {
           <h2 className='portfolio-title'>{description}</h2>
         </a>
 
-        <div className='flex justify-around'>
+        <div className='flex flex-row justify-between'>
           <div>
             <a href={github} target='blank' className='button button-1'>
               <FontAwesomeIcon icon={faGithub} />
