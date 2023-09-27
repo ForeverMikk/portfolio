@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
@@ -22,6 +26,13 @@
   --third-color: #4486d9;
   --fourth-color: #211e1e;
 
+  /* COLORS */
+  --primary-color: #4ee1a0; /* Verde */
+  --secondary-color: #fe4b87; /* Rosa */
+  --tertiary-color: #4486d9; /* Azul */
+  --accent-color: #ffcc5a; /* Amarillo */
+  --dark-background: #151515; /* Negro */
+  --text-color: #d9d9d9; /* Gris claro */
   // FONTS
   --title-font: 'Space Grotesk', sans-serif;
   --text-font: 'Montserrat', sans-serif;
@@ -145,9 +156,12 @@ img {
 .line {
   height: 50%;
   position: relative;
-  background: var(--third-color);
+  background: var(--accent-color);
   padding: 5px;
   bottom: -20px;
+}
+.text {
+  color: var(--dark-background);
 }
 
 /* ===== LAYOUT ===== */

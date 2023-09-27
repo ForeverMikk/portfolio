@@ -23,7 +23,7 @@
   transition: 0.3s;
 }
 .nav-toggle {
-  background-color: var(--first-color);
+  background-color: var(--dark-background);
   color: #fff;
   border: none;
   font-size: 1.3rem;
@@ -38,7 +38,7 @@
 .nav-toggle:hover,
 .nav-logo:hover {
   transition: all ease-in-out 0.3s;
-  color: var(--green);
+  color: var(--accent-color);
 }
 .nav-logo:hover {
   color: var(--blue);

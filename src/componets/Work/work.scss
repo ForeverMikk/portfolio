@@ -4,7 +4,7 @@
   text-align: left;
 }
 .work-content {
-  border-left: 4px solid var(--third-color);
+  border-left: 4px solid var(--dark-background);
   padding-left: 1rem;
 }
 .work-title {
@@ -29,7 +29,7 @@
 
 .work-area {
   font-size: var(--h3-font-size);
-  color: var(--first-color);
+  color: var(--text-color);
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
 }
@@ -37,7 +37,7 @@
 .work-icon,
 .work-company {
   font-size: var(--smaller-font-size);
-  color: var(--fourth-color);
+  color: var(--tertiary-color);
 }
 
 .work-icon {
