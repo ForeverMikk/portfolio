@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
 import './navbar.scss';
+import { useState } from 'react';
+
 
 export const scrollItem = itemId => {
   document.querySelector(`#${itemId}`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });

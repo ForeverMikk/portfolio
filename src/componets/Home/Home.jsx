@@ -1,7 +1,7 @@
-import React from 'react';
+
 import PropTypes from 'prop-types';
 
-import './Home.scss';
+import './home.scss';
 import curriculumEng from './../../assets/pdf/resume.pdf';
 import curriculumEsp from './../../assets/pdf/curriculum.pdf';
 import home from './../../assets/img/home2.jpg';
