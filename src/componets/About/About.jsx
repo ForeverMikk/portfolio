@@ -29,9 +29,9 @@ export const About = () => {
             Frontend Developer, Gekk & Hardware enthusiast always looking for new challenges about
             creating and developing my abilities as a <strong>Web Developer</strong> and Person
           </p>
-          <Achievement number={25} achiev='Age' />
-          <Achievement number={1.5} achiev='Years of Experience' />
-          <Achievement number={5} achiev='Finished Projects' />
+          <Achievement number={26} achiev='Age' />
+          <Achievement number={3} achiev='Years of Experience' />
+          <Achievement number='+10' achiev='Finished Projects' />
         </div>
 
         <img src={about_img} alt='' className='about-img' />

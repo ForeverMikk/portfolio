@@ -3,6 +3,48 @@ import PropTypes from 'prop-types';
 
 import './work.scss';
 
+const experience = [
+  {
+    title: 'Next Frontend Developer (CDMX)',
+    project: 'PITE IT Consulting ',
+    date: 'Jul 2023 - Present',
+    icon: 'bx-briefcase-alt',
+  },
+  {
+    title: 'React Frontend Developer (Hidalgo)',
+    project: 'Binahria Analitycs',
+    date: 'Jun 2022 - Jun 2023',
+    icon: 'bx-briefcase-alt',
+  },
+  {
+    title: 'React Frontend Developer (Hidalgo)',
+    project: 'Mobilesco Pachuca',
+    date: 'Jul 2021 - Feb 2022',
+    icon: 'bx-briefcase-alt',
+  },
+  {
+    title: 'React Frontend Developer (Spain)',
+    project: 'Partake / Flimbo',
+    date: 'Nov 2020 - Jun 2021',
+    icon: 'bx-briefcase-alt',
+  },
+];
+
+const education = [
+  {
+    title: 'Computer Enginner',
+    project: 'UAEH - Univercity of Hidalgo Satate',
+    date: '2015 - 2019',
+    icon: 'bx-book-alt',
+  },
+  {
+    title: 'Programming Technician',
+    project: 'CECyTEM',
+    date: '2012 - 2015',
+    icon: 'bx-book-alt',
+  },
+];
+
 const WorkQualification = ({ title, project, date, icon }) => {
   return (
     <div className='work-data'>
@@ -39,19 +81,15 @@ export const Work = () => {
           </h2>
 
           <div className='bd-grid'>
-            <WorkQualification
-              title='Jr. Frontend Developer'
-              project='Balché Nikté - Full Website UI'
-              date='May 2020 - Agu 2020'
-              icon='bx-briefcase-alt'
-            />
-
-            <WorkQualification
-              title='Jr. Web Developer'
-              project=' Leia MX - Hackathon App UI'
-              date='Jan 2019 - Dec 2019'
-              icon='bx-briefcase-alt'
-            />
+            {experience.map(company => (
+              <WorkQualification
+                key={company.title}
+                title={company.title}
+                project={company.project}
+                date={company.date}
+                icon={company.icon}
+              />
+            ))}
           </div>
         </div>
 
@@ -62,18 +100,15 @@ export const Work = () => {
           </h2>
 
           <div className='bd-grid'>
-            <WorkQualification
-              title='Computer Enginner'
-              project='UAEH - Univercity of Hidalgo Satate'
-              date='2015 - 2019'
-              icon='bx-book-alt'
-            />
-            <WorkQualification
-              title='Programming Technician'
-              project='CECyTEM'
-              date='2012 - 2015'
-              icon='bx-book-alt'
-            />
+            {education.map(school => (
+              <WorkQualification
+                key={school.title}
+                title={school.title}
+                project={school.project}
+                date={school.date}
+                icon={school.icon}
+              />
+            ))}
           </div>
         </div>
       </div>

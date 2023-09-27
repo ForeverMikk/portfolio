@@ -78,12 +78,14 @@ const PortfolioItem = ({ title, description, img, github, link }) => {
             <p className='text'>View on Github</p>
           </div>
 
-          <div>
-            <a href={link} target='blank' className='button button-1'>
-              <FontAwesomeIcon icon={faGlobe} />
-            </a>
-            <p className='text'>View Example</p>
-          </div>
+          {link && (
+            <div>
+              <a href={link} target='blank' className='button button-1'>
+                <FontAwesomeIcon icon={faGlobe} />
+              </a>
+              <p className='text'>View Example</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
