@@ -5,11 +5,13 @@
   left: 0;
   z-index: var(--z-fixed);
   color: #fff;
+  background-color: var(--dark-background);
 }
 
 /* ========== NAVBAR ===========*/
 .nav {
   height: var(--header-height);
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +61,7 @@
     height: 0;
     padding-top: 1.5rem;
     text-align: center;
-    background-color: var(--first-color);
+    background-color: var(--dark-background);
     // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: 0.4s ease-in-out;

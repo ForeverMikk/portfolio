@@ -88,7 +88,7 @@ body {
   font-weight: var(--font-meidum);
   line-height: 1.56;
 
-  background-color: var(--black);
+  background-color: var(--fourth-color);
   color: var(--text1);
 }
 
@@ -162,6 +162,10 @@ img {
 }
 .text {
   color: var(--dark-background);
+}
+.strong-text {
+  color: var(--accent-color);
+  font-weight: 500;
 }
 
 /* ===== LAYOUT ===== */

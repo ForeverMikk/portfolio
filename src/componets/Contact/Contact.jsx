@@ -5,7 +5,7 @@ import './contact.scss';
 
 const ContactBox = ({ title, description, icon }) => {
   return (
-    <div className='contact-box'>
+    <div className='contact-box flex flex-col justify-center items-center'>
       <i className={`bx ${icon} contact-icon`}> </i>
       <h3 className='contact-title'>{title}</h3>
       <span className='contact-description'>{description}</span>
@@ -48,7 +48,7 @@ export const Contact = () => {
           </div>
         </div>
 
-        <form action='' className='contact-form'>
+        {/* <form action='' className='contact-form'>
           <div className='contact-inputs'>
             <input type='text' placeholder='Name' className='contact-input' />
             <input type='email' placeholder='Emial' className='contact-input' />
@@ -66,7 +66,7 @@ export const Contact = () => {
             className='contact-input'
           ></textarea>
           <input type='submit' value='Send Message' className='button button-1 contact-button' />
-        </form>
+        </form> */}
       </div>
     </section>
   );

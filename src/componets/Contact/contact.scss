@@ -27,8 +27,11 @@
   font-size: var(--h3-font-size);
   margin: --mb-1 0;
 }
+.contact-description {
+  color: var(--dark-background);
+}
 .contact-social {
-  color: var(--fourth-color);
+  color: var(--dark-background);
   font-size: 1.25rem;
   margin: 0 var(--mb-1);
 }

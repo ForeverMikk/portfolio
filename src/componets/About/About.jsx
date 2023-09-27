@@ -26,8 +26,9 @@ export const About = () => {
           <p className='about-description'>
             <span>Hello, I am</span>
             <br />
-            Frontend Developer, Gekk & Hardware enthusiast always looking for new challenges about
-            creating and developing my abilities as a <strong>Web Developer</strong> and Person
+            Web developer specialized in creating websites and web applications using{' '}
+            <strong className='strong-text'>ReactJS (or NextJS)</strong> in combination with
+            Tailwind CSS. Also venturing into UX/UI interface design
           </p>
           <Achievement number={26} achiev='Age' />
           <Achievement number={3} achiev='Years of Experience' />
