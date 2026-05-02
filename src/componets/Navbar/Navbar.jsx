@@ -1,57 +1,111 @@
-import PropTypes from 'prop-types';
+import { useState, useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { useLanguage } from '../../context/LanguageContext';
+import { useTheme } from '../../context/ThemeContext';
 import './navbar.scss';
-import { useState } from 'react';
-
-
-export const scrollItem = itemId => {
-  document.querySelector(`#${itemId}`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });
-};
-
-const NavItem = ({ title, itemId }) => {
-  return (
-    <li className='nav-item'>
-      <a href={`#${itemId}`} className='nav-link' onClick={() => scrollItem(itemId)}>
-        {title}
-      </a>
-    </li>
-  );
-};
 
 export const Navbar = () => {
-  const [hideNavbar, setHideNavbar] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t, toggleLanguage, language } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
+  const easterEggClicksRef = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  const handleEasterEgg = () => {
+    easterEggClicksRef.current += 1;
+    if (easterEggClicksRef.current >= 5) {
+      scrollToSection('easter-egg');
+      easterEggClicksRef.current = 0;
+    }
+  };
+
+  const navItems = [
+    { id: 'home', label: t.nav.home },
+    { id: 'about', label: t.nav.about },
+    { id: 'skills', label: t.nav.skills },
+    { id: 'experience', label: t.nav.experience },
+    { id: 'projects', label: t.nav.projects },
+    { id: 'contact', label: t.nav.contact },
+  ];
 
   return (
-    <header className='header l-header' id='header'>
-      <nav className='nav bd-container'>
-        <a href='#home' className='nav-logo' onClick={() => scrollItem('header')}>
-          michael molina
-        </a>
+    <nav className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
+      <div className="navbar__container">
+        <div className="navbar__logo" onClick={() => scrollToSection('home')}>
+          <span className="navbar__logo-text">Michael Molina</span>
+        </div>
 
-        <div className={`nav-menu ${hideNavbar ? 'hide' : ''}`} id='nav-menu'>
-          <ul className='nav-list'>
-            <NavItem title='About me' itemId='about' />
-            <NavItem title='My work' itemId='work' />
-            <NavItem title='Portfolio' itemId='portfolio' />
-            <NavItem title='Services' itemId='services' />
-            <NavItem title='Contact me' itemId='contact' />
-          </ul>
+        <ul className={`navbar__menu ${isMobileMenuOpen ? 'navbar__menu--open' : ''}`}>
+          {navItems.map((item) => (
+            <li key={item.id} className="navbar__item">
+              <a
+                href={`#${item.id}`}
+                className="navbar__link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.id);
+                }}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="navbar__controls">
+          <button
+            className="navbar__control-btn"
+            onClick={toggleLanguage}
+            aria-label="Toggle language"
+            title={language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+          >
+            {language === 'es' ? 'EN' : 'ES'}
+          </button>
+          <button
+            className="navbar__control-btn"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            title={theme === 'dark' ? 'Cyberpunk Mode' : 'Dark Mode'}
+          >
+            <FontAwesomeIcon icon={theme === 'dark' ? faGamepad : faMoon} />
+          </button>
+          <button
+            className="navbar__control-btn navbar__easter-egg"
+            onClick={handleEasterEgg}
+            aria-label="Easter egg"
+            title="👀"
+          >
+            🎮
+          </button>
         </div>
 
         <button
-          id='toggle'
-          className='nav-toggle'
-          onClick={() => {
-            setHideNavbar(!hideNavbar);
-          }}
+          className={`navbar__toggle ${isMobileMenuOpen ? 'navbar__toggle--active' : ''}`}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          <i className='bx bx-menu'></i>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
-};
-
-NavItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  itemId: PropTypes.string.isRequired,
 };

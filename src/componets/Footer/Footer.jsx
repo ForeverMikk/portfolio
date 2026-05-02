@@ -1,38 +1,69 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { useLanguage } from '../../context/LanguageContext';
 import './footer.scss';
 
-const FooterLink = ({ icon, link }) => {
-  return (
-    <a href={`${link}`} target='blank' className='footer-link'>
-      <i className={`bx ${icon}`}></i>
-    </a>
-  );
-};
 export const Footer = () => {
-  return (
-    <footer className='footer'>
-      <div className='footer-container bd-container'>
-        <h1 className='footer-title'>Michael Molina</h1>
-        <p className='footer-description'>Frontend Developer,Gekk & hardware enthusiast</p>
+  const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
-        <div className='footer-social'>
-          <FooterLink
-            icon='bxl-linkedin'
-            link='https://www.linkedin.com/in/michael-molina-2582a9100'
-          />
-          <FooterLink icon='bxl-github' link='https://github.com/ForeverMikk' />
-          <FooterLink icon='bxl-twitter' link='https://twitter.com/ForeverMikk/' />
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer__content">
+          <div className="footer__info">
+            <h3 className="footer__name">Michael Molina</h3>
+            <p className="footer__tagline">{t.footer.tagline}</p>
+          </div>
+
+          <div className="footer__social">
+            <a
+              href="https://www.linkedin.com/in/michael-molina-2582a9100"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__social-link"
+              aria-label="LinkedIn"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a
+              href="https://github.com/ForeverMikk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__social-link"
+              aria-label="GitHub"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a
+              href="https://twitter.com/ForeverMikk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__social-link"
+              aria-label="Twitter"
+            >
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a
+              href="mailto:michaelmolina679@gmail.com"
+              className="footer__social-link"
+              aria-label="Email"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+          </div>
         </div>
 
-        <p className='footer-copy'>&#169; 2021 ForeverMik | Michael Molina</p>
+        <div className="footer__bottom">
+          <p className="footer__copyright">
+            © {currentYear} Michael Molina. {t.footer.rights}
+          </p>
+          <p className="footer__built">
+            {t.footer.made} <span className="footer__heart">❤️</span> {t.footer.using}
+          </p>
+        </div>
       </div>
     </footer>
   );
-};
-
-FooterLink.propTypes = {
-  icon: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
 };

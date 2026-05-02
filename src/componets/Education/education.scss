@@ -1,0 +1,131 @@
+.education {
+  background: var(--bg-primary);
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+
+    @media (min-width: 968px) {
+      grid-template-columns: 1.2fr 1fr;
+    }
+  }
+
+  &__subtitle {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  &__degrees {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  &__item {
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border-left: 3px solid var(--primary);
+    transition: var(--transition);
+
+    &:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-md);
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-xs);
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  &__degree {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  &__period {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  &__institution {
+    font-size: var(--font-size-base);
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  &__description {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  &__languages {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__lang-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+}
+
+.lang-card {
+  padding: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  &__name {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  &__level {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  &__bar {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+
+  &__progress {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s ease;
+  }
+}
